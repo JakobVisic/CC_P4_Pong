@@ -1,0 +1,292 @@
+/*********************************************************************
+                                                                                                                          -=+= .-                                         
+                                                                                                                        #@%@@=@=@**                                       
+                                         ..                                                                           ++*%===. --..:                                      
+                                     .:..:.--=.                                                                      :*- ...       +                                      
+                                    -% -=-:::-+@:                                                                      +=..        :                                      
+                                    *=::..: ..=+%                #:                                                    -#-=+*.-@@=                                        
+                                    -        :                  @:                                                      @--+*#@@@*.                                       
+                                    .  =-   -#%@               @:                                                       --=#@@@@%*@@:                                     
+                                    : -#=-.==+=               @.                                                         ..-++=-++@@@@@                                   
+                                  #+@@+==-=+#+*              @=                                                        . =*=.  .=:=@@@@@@-                                
+                                 .-  =*+---+*-@@@#   @@@@@: @:                       @                                .@@@@@@#   @@@@@@@@@@:                              
+                               =%=-.    : :*@@@@@@@@@@@@@@@@+                                                     :#*%@*#@=.=*#+@@@@@@@@@@@@                              
+                              ##*+=::       .. -@@@@@= ...@**%@@@@%#@@%+                                        -#%@@@@@+   ++@%@@@@@@%#@@#*%                             
+                             :   .:-:.     -*@@#+:....:+@@@@+.     +@=@==@:                                   +@.+#%    . @@@*#=%@@@@@@-::=@@                             
+                             .     ..:     #*+**%@=.  @@@@@%     @@@=+.%..                                  @@:.=.   .*%@@@@#=+-+@@@@%*@%=.%@                             
+                                      .      ... .#@@@.+@+.  .@@*=+=                                     :@@@@@@@*. ::.@@@@@@@@@@@@@+. .==-=                              
+                                    .::+=+.   .++-=@@@@@@@@@@+-*:                                      #@%#:---::-===+**#%%*=-:+**=  ::..::=                              
+                                  .%@@@@@.     :@@@@:-+:%-.:**                                         *#@      -*++=:-+=-=-.   . =@+:=**=%+                              
+                                   -==@@@@@@@@@@@== %@- *%%                                         +@@@#          %**=   #@%+@%==#@++.:#%#                               
+                                     =+#@@@@*-:-+.    ..                                             :*#=                 #@#+%*+=@@+-+-:@#                               
+                                       --:::=*+.                                                                          =@#**+++@%+=-+@-@                               
+                                         :                                                                                :@##****@%+====@*.                              
+                            .                                                                                              @##%#*#@#*==..-@%                              
+                                                                                                                           @*%@@#%@#*=@@@%@@                              
+                          .                                                                                               %@*#@%%@@*@@@@@@@@+                             
+                                                                                                                         =@@@@%@@@@@*@@@@@@@@                             
+                         . :.     ..                                                                                       %@#@@%%%%*.      .                             
+                      =-@@@@@@@@@@@@@@@%%%%%##****+++==-----::::....                                                 ....:::::::---=+=+*##%%%##%%%%-=-                    
+                      -                                                     ................................                                        *                     
+                      :                                                                                                                             *                     
+                      :  :===-::--::::::::.:::::.:...                                                                                               =                     
+                    .  +*+**+**#**#%####%#*%%##%%#@%##%%##%%#*#%%##%%##%@%%#%@%#%@%#%@@%#%@%#%%%%@%##%@#*%#*#%##*#%*###+*#**##+#+#**#+**#***#****##.=                     
+                 @@@%+++#%%%%%%%%%%%%%%%%%%###%%%%%%%%%%%###############******+++++++#@++====+++++==+++++++++++++=+++++++++++=======+++=++=++++++++::-%@@*                
+             :@@@++**#%#%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%#**+@@@+            
+           =@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%@@@-        
+            .....................................................:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::------==        
+             .. ..... .                                                               .         ..                                                                        
+                           :   :--=                ..                                                                     ....        ::-=-:.:                            
+                                #@@                     -==:                                                       .---:.              .     .                            
+                            ..-#-..     .:.                  :-=--     .                                           -+    :.             =-:*@@=                           
+                            #@@*..       -:                        :.                                              *+   .:       .       .  %@@-                          
+                           .@@%-.:       #:                                                                        *-   .:                . -@@@                          
+                           %%#=..       =@.                                                                        *-   ..                . .*@@:                         
+                           %*-...       #*:                                                                        *:  ..       .         :. -#@-                         
+                           %-..:.       #=-                .                                                       #-  .        .         .: .*%-                         
+                           %:..=        *--              ..                                                         --.         .          :. +%+                         
+                           %-:-.        +-:             .                                                          .  ::        .           : =@@                         
+                                                      .                                                           :%-           .            .-@@                         
+                           *--:         %*=          .                                                           :@@*@     :    .            =@@@                         
+                          .@@%*        -@:=                                                                   .@@@####:                      =@@@@                        
+                          @@@@@     *:+@##*      .                                                           #@@@%+.:-*               .      *@@@@@                       
+                         .@@@@@@    . .-#-=             ....::..:...::-:...   .                  ..        =@@@@@#+=-+@               .      *@@@@@:                      
+                         +@@@@@@   *@..                .   ::::.....:......               ............ ..-@#%%++#++==%@*..+-:         ...    +@@@@@@                      
+      ..                .@%:*@@@*  @@@%@%*-     :%@@@@+:::.....::.    .::........ .::...........  :-=++--:...----:.::--     .        ....:...*@@@@@@.                     
+     .                    ---....  @@%*+:=-                     .-.......  .        ..:.     .:         .-*+==#%%*=-==*. .-:-  =.            @+=---@=      .   .          
+               
+ 
+ 
+
+
+
+                      _________________| USB |___________________
+                     |   O                                      |
+                     |                                          |
+                     | [ ]D13             D12/PA19/CIPO(SC1)[ ] |        
+                     | [ ]+3V3            D11/PA16/COPI(SC1)[ ] |       
+                     | [ ]AREF                      D10/PA21[ ] |        
+                     | [ ]A0/D14                     D9/PA20[ ] |        
+                     | [ ]A1/D15                     D8/PA18[ ] |        
+                     | [ ]A2/D16~                    D7/PA08[ ] |       
+                     | [ ]A3/D17~                    D6/PA04[ ] |        
+                     | [ ]A4/D18                     D5/PA05[ ] |        
+                     | [ ]A5/D19~                    D4/PA07[ ] |          
+                     | [ ]A6/D20                     D3/PA11[ ] |         
+                     | [ ]A7/D21                     D2/PA10[ ] | 
+                     | [ ]+5V                            GND[ ] | 
+                     | [ ]RESET                        RESET[ ] |
+                     | [ ]GND                        RX/PB23[ ] |
+                     | [ ]VIN                        TX/PB22[ ] |
+                     |                                          |
+                    +-------------------------------------------+
+
+
+
+
+
+
+ * DF Pong Controller
+ * 
+ * This program implements a Bluetooth Low Energy controller for Pong.
+ * It sends movement data to a central device running in the browser and
+ * provides audio feedback through a buzzer.
+ *
+ * Game Link : https://digitalfuturesocadu.github.io/df-pong/
+ * 
+ * Movement Values:
+ * 0 = No movement / Neutral position
+ * 1 = UP movement (paddle moves up)
+ * 2 = DOWN movement (paddle moves down)
+ * 3 = Handshake signal (used for initial connection verification)
+ * 
+ * Key Functions:
+ * - handleInput(): Process the inputs to generate the states
+ * - sendMovement(): Sends movement data over BLE (0-3)
+ * - updateBLE(): Handles BLE connection management and updates
+ * - updateBuzzer(): Provides different buzzer patterns for different movements
+ * 
+ * Key Variables:
+ * - currentMovement: Stores current movement state (0-2)
+ * - deviceName : GIVE YOUR DEVICE AN APPROPRIATE NAME
+ * - LED_PIN : It is important to see the status of the arduino through the LED. 
+      if you can see the built-in add an external one and update the pin it is connected to
+ * 
+
+ *********************************************************************/
+
+
+// Libraries and files
+#include <ArduinoBLE.h>
+#include <Arduino_LSM6DS3.h>
+#include <Wire.h>
+#include <Adafruit_CAP1188.h>
+#include "ble_functions.h"
+#include "buzzer_functions.h"
+
+
+// Adafruit_CAP1188 cap = Adafruit_CAP1188();
+
+#define CAP1188_RESET  12
+#define CAP1188_SENSITIVITY 0x1F
+// Create the touch sensor object with reset pin
+Adafruit_CAP1188 cap = Adafruit_CAP1188(CAP1188_RESET);
+
+
+//Name your controller!
+const char* deviceName = "Violin";
+
+// Pin definitions buzzer/LED
+const int BUZZER_PIN = 11;       // Pin for haptic feedback buzzer
+const int LED_PIN = LED_BUILTIN; // Status LED pin
+
+// Movement state tracking
+int currentMovement = 0;         // Current movement value (0=none, 1=up, 2=down, 3=handshake)
+
+// Pin definitions for Button input
+const int BUTTON_UP_PIN = 6;     // Pin for UP movement button
+const int BUTTON_DOWN_PIN = 2;   // Pin for DOWN movement button
+
+bool objectSpinning;
+
+bool wire1Touched, wire2Touched = false;
+
+#define SPEED_SENSOR_PIN 3 // Digital pin connected to the sensor's DO pin
+volatile int pulseCount = 0; // Variable to store pulse count
+const int pulsesPerRevolution = 1; // Adjust if the sensor generates more pulses per revolution
+
+
+int LEDpin1 = 7;
+int LEDpin2 = 6;
+
+
+void countPulse() {
+  pulseCount++;
+}
+
+void checkIfSpinning() {
+  int pulseThreshold = 10; // Minimum pulses to detect motion (adjust as needed)
+  int detectionInterval = 100; // Time window in milliseconds to check pulses
+  
+  // Reset pulse count and start measuring
+  pulseCount = 0;
+  delay(detectionInterval); // Wait for the interval
+  int pulseRate = pulseCount; // Copy pulse count
+  
+  if (pulseRate > pulseThreshold) {
+    Serial.println("Object is spinning!");
+    objectSpinning = true;
+    // digitalWrite(LED_BUILTIN, HIGH);
+  
+  } else {
+    // Serial.println("Object is stationary.");
+     objectSpinning = false;
+    //  digitalWrite(LED_BUILTIN, LOW);
+  }
+  // delay(100); // Adjust as needed
+}
+
+
+void setup() 
+{
+  Serial.begin(9600);
+  Serial.println("DEBUG");
+
+
+  if (!cap.begin()) {
+    Serial.println("CAP1188 not found. Check connections!");
+    while (1);
+  }
+  Serial.println("CAP1188 found!");
+  cap.writeRegister(0x1F, 0x50); // Increase threshold for less sensitivity
+
+  
+  // Configure LED for connection status indication
+  pinMode(LED_PIN, OUTPUT);
+  
+  // Initialize Bluetooth Low Energy with device name and status LED
+  setupBLE(deviceName, LED_PIN);
+  
+  // Initialize buzzer for feedback
+  setupBuzzer(BUZZER_PIN);
+
+  pinMode(SPEED_SENSOR_PIN, INPUT);
+  attachInterrupt(digitalPinToInterrupt(SPEED_SENSOR_PIN), countPulse, FALLING); // Trigger on falling edge
+  // Serial.begin(115200);
+}
+
+
+void loop() 
+{
+  // Update BLE connection status and handle incoming data
+  updateBLE();
+   
+  //read the inputs te determine the current state
+  //results in changing the value of currentMovement
+
+  // check if a wire is being touched
+  isWireTouched();
+
+  // check if the wheel is spinning
+  checkIfSpinning();   
+
+  // move the paddle if a wire is touched and if the wheel is spinning
+  handleInput();
+
+  //send the movement state to P5  
+  sendMovement(currentMovement);
+
+  //make the correct noise
+  updateBuzzer(currentMovement);
+
+
+  // Serial.println("LOOPING");
+}
+
+
+void handleInput() 
+{
+  if (wire1Touched && !wire2Touched && objectSpinning) 
+  {
+    currentMovement = 1;         // UP movement
+  } 
+  else if (wire2Touched && !wire1Touched && objectSpinning) 
+  {
+    currentMovement = 2;         // DOWN movement
+  } 
+  else 
+  {
+    currentMovement = 0;         // No movement
+  }
+}
+
+void isWireTouched()
+{
+  uint8_t touched = cap.touched();
+
+  // Check if sensor 1 or 2 is touched
+  if (touched & (1 << 0)) {
+    Serial.println("Wire 1 (C1) touched!");
+    wire1Touched = true;
+    digitalWrite(LED_BUILTIN, HIGH);
+
+    analogWrite(LEDpin2, 255);
+  } else {
+    wire1Touched = false;
+    digitalWrite(LED_BUILTIN, LOW);
+    analogWrite(LEDpin2, 0);
+  }
+
+  if (touched & (1 << 7)) {
+    Serial.println("Wire 2 (C8) touched!");
+    
+    wire2Touched = true;
+    analogWrite(LEDpin1, 255);
+  } else {
+    wire2Touched = false;        
+    analogWrite(LEDpin1, 0);
+  }
+}
+
+
+
